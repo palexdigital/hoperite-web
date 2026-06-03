@@ -24,7 +24,7 @@ body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--FireBric
 .btn-nav { background: var(--deep-red); color: white !important; padding: 10px 20px; border-radius: 5px; }
 
 /* Hero Section */
-.hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--DodgerBlue); }
+.hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), <img src="images/front-of-the-shop.png" center/cover; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--DodgerBlue); }
 .hero h1 { font-size: 4.5rem; font-weight: 800; margin: 10px 0; }
 .badge { background: var(--orange); color: white; padding: 5px 15px; border-radius: 50px; text-transform: uppercase; font-size: 0.8rem; font-weight: 800; letter-spacing: 1px; }
 .hero-btns { margin-top: 30px; }
