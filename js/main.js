@@ -150,4 +150,4 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-console.log('🔥 Hoperite Fast Food — Website Loaded');
+console.log(' Hoperite Fast Food — Website Loaded');
