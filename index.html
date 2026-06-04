@@ -5,190 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoperite Fast Food | Fresh Meals & Salads</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="red-text">HOPE</span><span class="blue-text">RITE</span>
-            </a>
+            <a href="#" class="logo">HOPERITE</a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://wa.me/27742718108" class="btn-order-nav">Order Now</a></li>
+                <li><a href="#contact">Visit Us</a></li>
+                <li><a href="https://wa.me/27742718108" class="btn-order-nav">ORDER NOW</a></li>
             </ul>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Hoperite Fast Food</h1>
-            <p class="subheadline">Fresh chicken, steak, wings and pap meals served daily.</p>
-            <div class="usp-badge">Every plate includes 2 fresh salads</div>
-            <div class="hero-btns">
-                <a href="https://wa.me/27742718108" class="btn-primary">Order on WhatsApp</a>
-                <a href="#menu" class="btn-secondary">View Menu</a>
+    <!-- Hero Section (Fixed: Added content) -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>FLAME GRILLED PERFECTION</h1>
+                <p>Fresh chicken, steak, and pap meals served with 2 fresh salads.</p>
+                <div class="hero-btns">
+                    <a href="#menu" class="btn-primary">VIEW MENU</a>
+                    <a href="https://wa.me/27742718108" class="btn-white">ORDER ON WHATSAPP</a>
+                </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Featured Meals -->
-    <section class="section featured">
+    <!-- Fan Favorites (Fixed: Added Cards) -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Fan Favorites</h2>
+            <h2 class="section-title">FAN FAVORITES</h2>
             <div class="meal-grid">
-                <!-- Meal Card 1 -->
-                <div class="meal-card" data-aos="fade-up">
-                    <div class="meal-img" style="background-image: url('images/steak-pap.jpg');"></div>
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Steak and Pap">
                     <div class="meal-info">
                         <h3>Pap & Steak</h3>
-                        <p>Tender grilled steak served with traditional pap and 2 salads.</p>
+                        <p>Grilled steak + 2 salads</p>
                         <span class="price">R 85.00</span>
-                        <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food,%20I%20would%20like%20to%20order%20Pap%20&%20Steak" class="btn-sm">Order Now</a>
+                        <a href="https://wa.me/27742718108" class="btn-sm">ORDER</a>
                     </div>
                 </div>
-                <!-- Meal Card 2 -->
-                <div class="meal-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="meal-img" style="background-image: url('images/chicken.jpg');"></div>
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=500&q=80" alt="Chicken">
                     <div class="meal-info">
                         <h3>1/4 Chicken & Pap</h3>
-                        <p>Flame-grilled quarter chicken with a side of pap and 2 salads.</p>
+                        <p>Flame grilled + 2 salads</p>
                         <span class="price">R 75.00</span>
-                        <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food,%20I%20would%20like%20to%20order%20Quarter%20Chicken" class="btn-sm">Order Now</a>
+                        <a href="https://wa.me/27742718108" class="btn-sm">ORDER</a>
                     </div>
                 </div>
-                <!-- Meal Card 3 -->
-                <div class="meal-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="meal-img" style="background-image: url('images/wings.jpg');"></div>
+                <div class="meal-card">
+                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=500&q=80" alt="Wings">
                     <div class="meal-info">
                         <h3>Wings & Chips</h3>
-                        <p>6 Zesty wings served with golden crispy chips and salads.</p>
+                        <p>6 Zesty wings + salads</p>
                         <span class="price">R 65.00</span>
-                        <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food,%20I%20would%20like%20to%20order%20Wings%20and%20Chips" class="btn-sm">Order Now</a>
+                        <a href="https://wa.me/27742718108" class="btn-sm">ORDER</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-us">
+    <!-- Explore Menu (Fixed: Added Items) -->
+    <section id="menu" class="section bg-light">
         <div class="container">
-            <div class="features-grid">
-                <div class="feature-item" data-aos="zoom-in">
-                    <i class="fas fa-fire-alt"></i>
-                    <h3>Flame Grilled</h3>
-                    <p>Authentic taste in every bite.</p>
-                </div>
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-leaf"></i>
-                    <h3>2 Fresh Salads</h3>
-                    <p>Included with every single plate.</p>
-                </div>
-                <div class="feature-item" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Fast Service</h3>
-                    <p>Hot meals ready when you are.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Menu Section -->
-    <section id="menu" class="section menu-section">
-        <div class="container">
-            <h2 class="section-title">Explore Our Menu</h2>
-            
+            <h2 class="section-title">EXPLORE OUR MENU</h2>
             <div class="menu-tabs">
-                <button class="tab-btn active" onclick="filterMenu('plates')">Plates</button>
-                <button class="tab-btn" onclick="filterMenu('meat')">Meat Only</button>
-                <button class="tab-btn" onclick="filterMenu('wings')">Wings</button>
+                <button class="tab-btn active">Plates</button>
+                <button class="tab-btn">Meat Only</button>
+                <button class="tab-btn">Wings</button>
             </div>
-
-            <div class="menu-grid" id="menu-items">
-                <!-- Items are populated via JS or manually here -->
-                <div class="menu-item plates">
-                    <div class="m-info">
-                        <h4>Pap & Wors Plate</h4>
-                        <p>Traditional wors, pap, and 2 salads.</p>
-                    </div>
-                    <div class="m-price">R 70.00</div>
-                    <a href="https://wa.me/27742718108?text=Order:%20Pap%20and%20Wors" class="m-order"><i class="fab fa-whatsapp"></i></a>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span>Pap & Wors Plate (with 2 Salads)</span>
+                    <span class="m-price">R 70.00</span>
                 </div>
-                <!-- Repeat for other items -->
+                <div class="menu-item">
+                    <span>Beef Stew & Pap (with 2 Salads)</span>
+                    <span class="m-price">R 79.00</span>
+                </div>
+                <div class="menu-item">
+                    <span>Full Chicken Only</span>
+                    <span class="m-price">R 160.00</span>
+                </div>
+                <div class="menu-item">
+                    <span>12 Wings & Large Chips</span>
+                    <span class="m-price">R 120.00</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Daily Special Banner -->
-    <section class="daily-special">
-        <div class="container">
-            <div class="special-box" data-aos="flip-up">
-                <span class="label">TODAY'S SPECIAL</span>
-                <h2>Beef Stew & Pap</h2>
-                <p>Rich, slow-cooked beef stew served with fluffy pap and our signature 2 salads.</p>
-                <div class="special-price">Only R 79.00</div>
-                <a href="https://wa.me/27742718108?text=I%20want%20the%20Daily%20Special" class="btn-primary">Claim Special</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location & Contact -->
-    <section id="contact" class="section contact">
+    <!-- Visit Us (Fixed: Added Info) -->
+    <section id="contact" class="section dark-section">
         <div class="container grid-2">
-            <div class="contact-info">
-                <h2 class="section-title" style="text-align: left;">Visit Us</h2>
+            <div class="contact-text">
+                <h2 class="section-title" style="text-align: left;">VISIT US</h2>
                 <p><i class="fas fa-map-marker-alt"></i> 555 Francis Baard St, Arcadia, Pretoria</p>
                 <p><i class="fas fa-phone"></i> 074 271 8108</p>
-                
                 <div class="hours">
-                    <h4>Operating Hours</h4>
-                    <ul>
-                        <li>Mon - Thu: 7:00 AM – 10:00 PM</li>
-                        <li>Friday: 7:00 AM – 11:00 PM</li>
-                        <li>Saturday: 7:30 AM – 10:00 PM</li>
-                        <li>Sunday: 7:00 AM – 10:00 PM</li>
-                    </ul>
+                    <p><strong>Mon - Thu:</strong> 7:00 AM – 10:00 PM</p>
+                    <p><strong>Friday:</strong> 7:00 AM – 11:00 PM</p>
+                    <p><strong>Sat - Sun:</strong> 7:30 AM – 10:00 PM</p>
                 </div>
-                <a href="tel:0742718108" class="btn-secondary">Call Now</a>
+                <a href="tel:0742718108" class="btn-primary">CALL NOW</a>
             </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.75024410986!2d28.2045501!3d-25.745811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e990520264024c1%3A0xc3f17d7b0a82b496!2s555%20Francis%20Baard%20St%2C%20Arcadia%2C%20Pretoria%2C%200002!5e0!3m2!1sen!2sza!4v1700000000000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="map-box">
+                <!-- Replace this with an actual Google Maps Iframe if needed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.75!2d28.20!3d-25.74!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e990520264024c1%3A0xc3f17d7b0a82b496!2s555%20Francis%20Baard%20St!5e0!3m2!1sen!2sza!4v1710000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">HOPERITE</div>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/27742718108"><i class="fab fa-whatsapp"></i></a>
-                </div>
-                <p>&copy; 2024 Hoperite Fast Food. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2024 Hoperite Fast Food. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
