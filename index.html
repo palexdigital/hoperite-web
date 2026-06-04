@@ -3,31 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoperite Fast Food | Premium Meals</title>
+    <meta name="description" content="Hoperite Fast Food - Premium fresh meals in Arcadia, Pretoria. Every plate includes 2 fresh salads.">
+    <meta name="theme-color" content="#B91C1C">
+    <title>Hoperite Fast Food - Fresh Meals in Arcadia</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- NAVIGATION -->
-    <nav class="navbar">
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="images/logo.png" alt="HOPERITE LOGO" class="nav-logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Visit Us</a></li>
-                <li><a href="https://wa.me/27742718108?text=Hello,%20I%20want%20to%20place%20an%20order" class="btn-order-nav">ORDER NOW</a></li>
+            <div class="nav-logo">
+                <div class="logo-icon">H</div>
+                <span>Hoperite</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20place%20an%20order" class="btn-order-nav">Order Now</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header id="home" class="hero">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <img src="images/logo.png" alt="Hoperite" class="hero-logo">
-                <h1>FLAME GRILLED PERF
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Hoperite Fast Food</h1>
+            <p class="hero-subtitle">Fresh chicken, steak, wings and pap meals served daily</p>
+            <p class="hero-highlight">Every plate includes 2 fresh salads</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20place%20an%20order" class="btn btn-primary">Order on WhatsApp</a>
+                <a href="#menu" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Featured Meals Section -->
+    <section class="featured-meals" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Meals</h2>
+            <p class="section-subtitle">Our most popular combinations</p>
+            <div class="meals-grid">
+                <div class="meal-card" data-aos="fade-up">
+                    <div class="meal-image" style="background: linear-gradient(135deg, #D4A574 0%, #8B6F47 100%);"></div>
+                    <h3>Pap & Steak</h3>
+                    <p class="meal-description">Tender grilled steak with creamy pap and 2 fresh salads</p>
+                    <p class="meal-price">R89.99</p>
+                    <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap%20%26%20Steak" class="btn-meal">Order Now</a>
+                </div>
+                <div class="meal-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="meal-image" style="background: linear-gradient(135deg, #E8B047 0%, #C69C45 100%);"></div>
+                    <h3>Pap & Wors</h3>
+                    <p class="meal-description">Juicy boerewors with creamy pap and 2 fresh salads</p>
+                    <p class="meal-price">R79.99</p>
+                    <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap%20%26%20Wors" class="btn-meal">Order Now</a>
+                </div>
+                <div class="meal-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="meal-image" style="background: linear-gradient(135deg, #D4715F 0%, #A24C3A 100%);"></div>
+                    <h3>Pap & Quarter Chicken</h3>
+                    <p class="meal-description">Flame-grilled quarter chicken with pap and 2 fresh salads</p>
+                    <p class="meal-price">R84.99</p>
+                    <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap%20%26%20Quarter%20Chicken" class="btn-meal">Order Now</a>
+                </div>
+                <div class="meal-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="meal-image" style="background: linear-gradient(135deg, #F4A460 0%, #D2691E 100%);"></div>
+                    <h3>Wings & Chips</h3>
+                    <p class="meal-description">Crispy grilled wings with golden chips and 2 fresh salads</p>
+                    <p class="meal-price">R74.99</p>
+                    <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Wings%20%26%20Chips" class="btn-meal">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Hoperite Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Hoperite</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Flame Grilled</h3>
+                    <p>Premium flame-grilled meals prepared to perfection</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🥗</div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Every plate includes 2 fresh, crisp salads</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Service</h3>
+                    <p>Quick preparation without compromising quality</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">💰</div>
+                    <h3>Affordable Prices</h3>
+                    <p>Premium meals at reasonable prices</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">📍</div>
+                    <h3>Prime Location</h3>
+                    <p>Conveniently located in Arcadia, Pretoria</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>Consistent excellence in every meal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <p class="section-subtitle">All meals include 2 fresh salads</p>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-tab="plates">Plates</button>
+                <button class="menu-tab" data-tab="meat">Meat</button>
+                <button class="menu-tab" data-tab="wings">Wings</button>
+                <button class="menu-tab" data-tab="sides">Sides</button>
+            </div>
+
+            <div class="menu-content">
+                <!-- Plates Menu -->
+                <div class="menu-tab-content active" id="plates">
+                    <div class="menu-items-grid">
+                        <div class="menu-item" data-aos="fade-up">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #D4A574 0%, #8B6F47 100%);"></div>
+                            <h3>Pap & Steak</h3>
+                            <p>Tender grilled steak with creamy pap</p>
+                            <p class="price">R89.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap%20%26%20Steak" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #E8B047 0%, #C69C45 100%);"></div>
+                            <h3>Pap & Wors</h3>
+                            <p>Juicy boerewors with creamy pap</p>
+                            <p class="price">R79.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap%20%26%20Wors" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #D4715F 0%, #A24C3A 100%);"></div>
+                            <h3>Pap & Quarter Chicken</h3>
+                            <p>Flame-grilled quarter chicken with pap</p>
+                            <p class="price">R84.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap%20%26%20Quarter%20Chicken" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #C67C4E 0%, #8B5A2B 100%);"></div>
+                            <h3>Pap & Half Chicken</h3>
+                            <p>Grilled half chicken with creamy pap</p>
+                            <p class="price">R109.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap%20%26%20Half%20Chicken" class="btn-menu-order">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meat Menu -->
+                <div class="menu-tab-content" id="meat">
+                    <div class="menu-items-grid">
+                        <div class="menu-item" data-aos="fade-up">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #8B5A2B 0%, #654321 100%);"></div>
+                            <h3>Steak</h3>
+                            <p>Premium flame-grilled steak</p>
+                            <p class="price">R69.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Steak" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);"></div>
+                            <h3>Boerewors</h3>
+                            <p>Authentic traditional boerewors</p>
+                            <p class="price">R59.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Boerewors" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #DAA520 0%, #B8860B 100%);"></div>
+                            <h3>Quarter Chicken</h3>
+                            <p>Flame-grilled quarter chicken</p>
+                            <p class="price">R64.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Quarter%20Chicken" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #CD853F 0%, #8B7355 100%);"></div>
+                            <h3>Half Chicken</h3>
+                            <p>Grilled half chicken</p>
+                            <p class="price">R89.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Half%20Chicken" class="btn-menu-order">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wings Menu -->
+                <div class="menu-tab-content" id="wings">
+                    <div class="menu-items-grid">
+                        <div class="menu-item" data-aos="fade-up">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #FF6B6B 0%, #D9534F 100%);"></div>
+                            <h3>6 Wings</h3>
+                            <p>Crispy grilled wings (6 pieces)</p>
+                            <p class="price">R44.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%206%20Wings" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #F56B4D 0%, #D9534F 100%);"></div>
+                            <h3>10 Wings</h3>
+                            <p>Crispy grilled wings (10 pieces)</p>
+                            <p class="price">R64.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%2010%20Wings" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);"></div>
+                            <h3>20 Wings</h3>
+                            <p>Crispy grilled wings (20 pieces)</p>
+                            <p class="price">R119.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%2020%20Wings" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #F4A460 0%, #D2691E 100%);"></div>
+                            <h3>Wings & Chips</h3>
+                            <p>Wings with golden chips and 2 salads</p>
+                            <p class="price">R74.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Wings%20%26%20Chips" class="btn-menu-order">Order</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sides Menu -->
+                <div class="menu-tab-content" id="sides">
+                    <div class="menu-items-grid">
+                        <div class="menu-item" data-aos="fade-up">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);"></div>
+                            <h3>Chips</h3>
+                            <p>Golden crispy chips</p>
+                            <p class="price">R24.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Chips" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #E8B047 0%, #D4A574 100%);"></div>
+                            <h3>Pap</h3>
+                            <p>Creamy traditional pap</p>
+                            <p class="price">R19.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Pap" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #98D98E 0%, #5CB85C 100%);"></div>
+                            <h3>Salad</h3>
+                            <p>Fresh mixed salad</p>
+                            <p class="price">R14.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Salad" class="btn-menu-order">Order</a>
+                        </div>
+                        <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="menu-item-image" style="background: linear-gradient(135deg, #D4A574 0%, #8B6F47 100%);"></div>
+                            <h3>Stew</h3>
+                            <p>Traditional meat stew</p>
+                            <p class="price">R39.99</p>
+                            <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20Stew" class="btn-menu-order">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Specials Section -->
+    <section class="daily-specials" id="specials">
+        <div class="container">
+            <div class="specials-banner">
+                <div class="specials-content">
+                    <p class="specials-label">⭐ TODAY'S SPECIAL ⭐</p>
+                    <h2>Pap & Steak Combo</h2>
+                    <p class="specials-description">Tender flame-grilled steak, creamy pap, and 2 fresh salads</p>
+                    <p class="specials-price">Only R79.99</p>
+                    <a href="https://wa.me/27742718108?text=Hello%20Hoperite%20Fast%20Food%2C%20I%20would%20like%20to%20order%20the%20Today%27s%20Special" class="btn btn-primary">Order Special</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Food Gallery</h2>
+            <p class="section-subtitle">Mouth-watering visuals of our delicious meals</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #D4A574 0%, #8B6F47 100%);"></div>
+                    <p>Pap & Steak</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #F4A460 0%, #D2691E 100%);"></div>
+                    <p>Wings & Chips</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #E8B047 0%, #C69C45 100%);"></div>
+                    <p>Pap & Wors</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #D4715F 0%, #A24C3A 100%);"></div>
+                    <p>Pap & Quarter Chicken</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #98D98E 0%, #5CB85C 100%);"></div>
+                    <p>Fresh Salads</p>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);"></div>
+                    <p>Golden Chips</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The best fast food in Arcadia! Fresh ingredients and great service. The pap and steak is absolutely delicious!"</p>
+                    <p class="testimonial-author">- Thabo M.</p>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Love that every meal comes with 2 salads. Great value for money and the staff is always friendly."</p>
+                    <p class="testimonial-author">- Naledi S.</p>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Ordered the wings and chips last night. Crispy, hot, and exactly what I needed. Will definitely order again!"</p>
+                    <p class="testimonial-author">- Sipho K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+        <div class="container">
+            <h2 class="section-title">Visit Us</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Hoperite Fast Food</h3>
+                    <p><strong>Address:</strong><br>555 Francis Baard St<br>Arcadia, Pretoria, 0002</p>
+                    <p><strong>Phone:</strong><br><a href="tel:+27742718108">074 271 8108</a></p>
+                    <p><strong>Hours:</strong></p>
+                    <ul class="hours-list">
+                        <li>Monday - Thursday: 7:00 AM – 10:00 PM</li>
+                        <li>Friday: 7:00 AM – 11:00 PM</li>
+                        <li>Saturday: 7:30 AM – 10:00 PM</li>
+                        <li>Sunday: 7:00 AM – 10:00 PM</li>
+                    </ul>
+                    <a href="https://maps.google.com/?q=555+Francis+Baard+St,+Arcadia,+Pretoria,+0002" target="_blank" class="btn btn-secondary">Get Directions</a>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.1234567890123!2d28.2234!3d-25.7461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956d8a8a8a8a8b%3A0x0!2s555%20Francis%20Baard%20St%2C%20Arcadia%2C%20Pretoria%2C%200002!5e0!3m2!1sen!2sza!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card" data-aos="fade-up">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+27742718108">074 271 8108</a></p>
+                    <p class="contact-subtitle">Monday - Sunday: 7:00 AM - 11:00 PM</p>
+                </div>
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/27742718108">Chat with us</a></p>
+                    <p class="contact-subtitle">Quick and convenient ordering</p>
+                </div>
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon">📍</div>
+                    <h3>Visit Us</h3>
+                    <p>555 Francis Baard St<br>Arcadia, Pretoria</p>
+                    <p class="contact-subtitle">Fresh meals prepared daily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hoperite Fast Food</h4>
+                    <p>Premium fast food in Arcadia, Pretoria. Fresh ingredients, flame-grilled excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 555 Francis Baard St, Arcadia, Pretoria<br>
+                    📞 <a href="tel:+27742718108">074 271 8108</a><br>
+                    💬 <a href="https://wa.me/27742718108">WhatsApp</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Mon-Thu: 7 AM - 10 PM<br>
+                    Fri: 7 AM - 11 PM<br>
+                    Sat: 7:30 AM - 10 PM<br>
+                    Sun: 7 AM - 10 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hoperite Fast Food. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
