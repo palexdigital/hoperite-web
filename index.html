@@ -3,129 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoperite Fast Food | Fresh Meals & Salads</title>
+    <title>Hoperite Fast Food | Premium Meals</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">HOPERITE</a>
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="HOPERITE LOGO" class="nav-logo">
+            </a>
             <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Visit Us</a></li>
-                <li><a href="https://wa.me/27742718108" class="btn-order-nav">ORDER NOW</a></li>
+                <li><a href="https://wa.me/27742718108?text=Hello,%20I%20want%20to%20place%20an%20order" class="btn-order-nav">ORDER NOW</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section (Fixed: Added content) -->
-    <header class="hero">
+    <!-- HERO SECTION -->
+    <header id="home" class="hero">
         <div class="hero-overlay">
             <div class="hero-content">
-                <h1>FLAME GRILLED PERFECTION</h1>
-                <p>Fresh chicken, steak, and pap meals served with 2 fresh salads.</p>
-                <div class="hero-btns">
-                    <a href="#menu" class="btn-primary">VIEW MENU</a>
-                    <a href="https://wa.me/27742718108" class="btn-white">ORDER ON WHATSAPP</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Fan Favorites (Fixed: Added Cards) -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">FAN FAVORITES</h2>
-            <div class="meal-grid">
-                <div class="meal-card">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Steak and Pap">
-                    <div class="meal-info">
-                        <h3>Pap & Steak</h3>
-                        <p>Grilled steak + 2 salads</p>
-                        <span class="price">R 85.00</span>
-                        <a href="https://wa.me/27742718108" class="btn-sm">ORDER</a>
-                    </div>
-                </div>
-                <div class="meal-card">
-                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=500&q=80" alt="Chicken">
-                    <div class="meal-info">
-                        <h3>1/4 Chicken & Pap</h3>
-                        <p>Flame grilled + 2 salads</p>
-                        <span class="price">R 75.00</span>
-                        <a href="https://wa.me/27742718108" class="btn-sm">ORDER</a>
-                    </div>
-                </div>
-                <div class="meal-card">
-                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=500&q=80" alt="Wings">
-                    <div class="meal-info">
-                        <h3>Wings & Chips</h3>
-                        <p>6 Zesty wings + salads</p>
-                        <span class="price">R 65.00</span>
-                        <a href="https://wa.me/27742718108" class="btn-sm">ORDER</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Explore Menu (Fixed: Added Items) -->
-    <section id="menu" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">EXPLORE OUR MENU</h2>
-            <div class="menu-tabs">
-                <button class="tab-btn active">Plates</button>
-                <button class="tab-btn">Meat Only</button>
-                <button class="tab-btn">Wings</button>
-            </div>
-            <div class="menu-list">
-                <div class="menu-item">
-                    <span>Pap & Wors Plate (with 2 Salads)</span>
-                    <span class="m-price">R 70.00</span>
-                </div>
-                <div class="menu-item">
-                    <span>Beef Stew & Pap (with 2 Salads)</span>
-                    <span class="m-price">R 79.00</span>
-                </div>
-                <div class="menu-item">
-                    <span>Full Chicken Only</span>
-                    <span class="m-price">R 160.00</span>
-                </div>
-                <div class="menu-item">
-                    <span>12 Wings & Large Chips</span>
-                    <span class="m-price">R 120.00</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visit Us (Fixed: Added Info) -->
-    <section id="contact" class="section dark-section">
-        <div class="container grid-2">
-            <div class="contact-text">
-                <h2 class="section-title" style="text-align: left;">VISIT US</h2>
-                <p><i class="fas fa-map-marker-alt"></i> 555 Francis Baard St, Arcadia, Pretoria</p>
-                <p><i class="fas fa-phone"></i> 074 271 8108</p>
-                <div class="hours">
-                    <p><strong>Mon - Thu:</strong> 7:00 AM – 10:00 PM</p>
-                    <p><strong>Friday:</strong> 7:00 AM – 11:00 PM</p>
-                    <p><strong>Sat - Sun:</strong> 7:30 AM – 10:00 PM</p>
-                </div>
-                <a href="tel:0742718108" class="btn-primary">CALL NOW</a>
-            </div>
-            <div class="map-box">
-                <!-- Replace this with an actual Google Maps Iframe if needed -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.75!2d28.20!3d-25.74!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e990520264024c1%3A0xc3f17d7b0a82b496!2s555%20Francis%20Baard%20St!5e0!3m2!1sen!2sza!4v1710000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Hoperite Fast Food. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+                <img src="images/logo.png" alt="Hoperite" class="hero-logo">
+                <h1>FLAME GRILLED PERF
