@@ -1,153 +1,107 @@
-// ============================================================
-// HOPERITE FAST FOOD — MAIN JAVASCRIPT
-// ============================================================
+/**
+ * Hoperite Fast Food - Interactive Logic
+ */
 
-const PHONE = '27742718108';
-const WA_BASE = `https://wa.me/${PHONE}?text=`;
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. MENU TAB SWITCHING LOGIC
+    // This makes the Plates, Meat Only, and Wings buttons work
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const categoryGroups = document.querySelectorAll('.category-group');
 
-// ---- Loader ----
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const loader = document.getElementById('loader');
-    if (loader) loader.classList.add('hidden');
-  }, 2000);
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Get the category from the button text or a data attribute
+            // In our case, we'll check the text content or use the function logic
+            const category = button.innerText.toLowerCase().replace(" ", "");
+
+            // Remove 'active' class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            // Add 'active' class to clicked button
+            button.classList.add('active');
+
+            // Hide all menu groups
+            categoryGroups.forEach(group => {
+                group.style.display = 'none';
+                group.style.opacity = '0';
+            });
+
+            // Show the specific group
+            const activeGroup = document.querySelector(`.category-group.${category}`);
+            if (activeGroup) {
+                activeGroup.style.display = 'block';
+                // Add a small fade-in effect
+                setTimeout(() => {
+                    activeGroup.style.opacity = '1';
+                    activeGroup.style.transition = 'opacity 0.4s ease';
+                }, 10);
+            }
+        });
+    });
+
+    // 2. SMOOTH SCROLLING
+    // Makes the "Menu" and "Visit Us" links slide smoothly down the page
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // Offset for the sticky navbar
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // 3. STICKY NAVBAR EFFECT
+    // Changes the navbar background color when you scroll down
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.padding = '5px 0';
+            navbar.style.backgroundColor = '#001A42'; // Darker blue on scroll
+            navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.5)';
+        } else {
+            navbar.style.padding = '10px 0';
+            navbar.style.backgroundColor = '#002D72'; // Original blue
+            navbar.style.boxShadow = 'none';
+        }
+    });
+
+    // 4. AUTOMATIC WHATSAPP MESSAGE LOGIC
+    // (Optional) Logs when an order is attempted
+    const orderButtons = document.querySelectorAll('.btn-card, .btn-whatsapp, .btn-order-nav');
+    orderButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            console.log("Order button clicked. Redirecting to WhatsApp...");
+        });
+    });
+
 });
 
-// ---- Navbar scroll ----
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
-});
+// Function to handle category switching via inline onclick (if used in HTML)
+function showCategory(cat) {
+    const groups = document.querySelectorAll('.category-group');
+    const buttons = document.querySelectorAll('.tab-btn');
 
-// ---- Mobile Menu ----
-const hamburger = document.querySelector('.hamburger');
-const mobileNav = document.querySelector('.mobile-nav');
-hamburger?.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  mobileNav.classList.toggle('open');
-  document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
-});
-document.querySelectorAll('.mobile-nav a').forEach(a => {
-  a.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    mobileNav.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
+    groups.forEach(group => group.style.display = 'none');
+    buttons.forEach(btn => btn.classList.remove('active'));
 
-// ---- Scroll Reveal ----
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+    const selectedGroup = document.querySelector('.' + cat);
+    if (selectedGroup) {
+        selectedGroup.style.display = 'block';
     }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-
-document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
-  revealObserver.observe(el);
-});
-
-// Add staggered delays to grid children
-document.querySelectorAll('.featured-grid .meal-card, .why-grid .why-card, .menu-grid .menu-item, .contact-grid .contact-card').forEach((el, i) => {
-  el.style.transitionDelay = `${i * 0.08}s`;
-});
-
-// ---- Menu Tabs ----
-const menuTabs = document.querySelectorAll('.menu-tab');
-const menuGrids = document.querySelectorAll('.menu-grid');
-
-menuTabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = tab.dataset.tab;
-    menuTabs.forEach(t => t.classList.remove('active'));
-    menuGrids.forEach(g => g.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById(target)?.classList.add('active');
-  });
-});
-
-// ---- Gallery Lightbox ----
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxClose = document.querySelector('.lightbox-close');
-
-document.querySelectorAll('.gallery-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const img = item.querySelector('img');
-    lightboxImg.src = img.src;
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
-});
-
-lightboxClose?.addEventListener('click', closeLightbox);
-lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-function closeLightbox() {
-  lightbox.classList.remove('open');
-  document.body.style.overflow = '';
+    
+    // Find the button that matches the category and make it active
+    buttons.forEach(btn => {
+        if (btn.innerText.toLowerCase().includes(cat.slice(0, 3))) {
+            btn.classList.add('active');
+        }
+    });
 }
-
-// ---- WhatsApp Order ----
-window.orderWhatsApp = function(meal) {
-  const msg = encodeURIComponent(`Hello Hoperite Fast Food, I would like to order ${meal}.`);
-  window.open(`${WA_BASE}${msg}`, '_blank');
-};
-
-// ---- Testimonial Slider Dots ----
-const slider = document.querySelector('.testimonials-slider');
-const dots = document.querySelectorAll('.slider-dot');
-
-dots.forEach((dot, i) => {
-  dot.addEventListener('click', () => {
-    const cards = slider.querySelectorAll('.testimonial-card');
-    if (cards[i]) {
-      slider.scrollTo({ left: cards[i].offsetLeft - 24, behavior: 'smooth' });
-    }
-  });
-});
-
-slider?.addEventListener('scroll', () => {
-  const cards = slider.querySelectorAll('.testimonial-card');
-  let closest = 0;
-  let minDist = Infinity;
-  cards.forEach((card, i) => {
-    const dist = Math.abs(card.getBoundingClientRect().left);
-    if (dist < minDist) { minDist = dist; closest = i; }
-  });
-  dots.forEach((d, i) => d.classList.toggle('active', i === closest));
-});
-
-// ---- Highlight today in hours ----
-const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const today = dayNames[new Date().getDay()];
-document.querySelectorAll('.hours-row').forEach(row => {
-  const dayEl = row.querySelector('.day');
-  if (dayEl && dayEl.textContent.trim() === today) row.classList.add('today');
-});
-
-// ---- Smooth scroll for anchor links ----
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
-
-// ---- Parallax hero ----
-const heroBg = document.querySelector('.hero-bg');
-window.addEventListener('scroll', () => {
-  if (heroBg) {
-    heroBg.style.transform = `translateY(${window.scrollY * 0.3}px) scale(1.05)`;
-  }
-}, { passive: true });
-
-console.log('🔥 Hoperite Fast Food — Website Loaded');
